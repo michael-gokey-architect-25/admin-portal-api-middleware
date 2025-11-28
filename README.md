@@ -1,14 +1,14 @@
 # Java Spring Boot API Middleware Design
 
-**NOTES: I AM NOT A JAVA programmer**,  *I am a pretty good pattern guy. copy pasta. Been that way since I first started look at WebSphere Host Publisher code, and then later learned it was EJB v1. Then I learned Servlet v1 & v2, at the same time with those old red Wrox books. Then EJB v2.... and then bounced. Then later did PJO work, layers and patterns. Still never learned Java. Just copy pasta. I can see examples, amples, and make it work. 
+**NOTES: I AM NOT A JAVA programmer**,  *I am a pretty good pattern guy. copy pasta. Been that way since I first started look at WebSphere Host Publisher code in 2000, and then later learned it was a form of EJB v1. Then I learned Servlet v1 & v2, at the same time with those old red Wrox books. Then EJB v2.... and then bounced. Then later did POJO work, layers and patterns. Still never learned Java. Just copy pasta. I can see examples, amples, and make it work. 
 And then at Cognizant Hartford, I spent hours "learning" / mastering the Spring Boot API designs.*
 
 *Remarkdly, I can do the same with .NET API work. Simular patterns, once you undertand the layers and the OpenAPI Swagger doc.*
 
 #### Next steps
 I know it looks like a lot of broken stuff. But it takes time to figure out each step
-- 4 Service Layer, (this push commit)
-- 5 Controller Layer,
+- 4 Service Layer,  (DONE)
+- 5 Controller Layer, (this push commit)
 - 6 Repository Layer,
 - 7 Exception Handling
 - 8 Unit & Integration Tests
@@ -26,7 +26,7 @@ There is a Data repo, data-portal, and a Multi-Cloud Highly Available Web Applic
 
 See the Wiki for Notes:
 
-https://github.com/michael-gokey-architect-25/admin-portal-api-middleware/wiki
+https://github.com/michael-gokey-architect-25/admin-portal-api-middleware/wiki  UPDATED! 
 
 
 
