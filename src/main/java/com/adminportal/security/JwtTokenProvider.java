@@ -1,5 +1,7 @@
 
 // admin-portal-api/src/main/java/com/adminportal/security/JwtTokenProvider.java
+
+
 // ============================================================================
 // PURPOSE: JWT (JSON Web Token) creation, validation, and parsing
 // - Generates access and refresh tokens
@@ -36,9 +38,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.UUID;
 
+
 /**
  * JWT Token Provider - Handles JWT token generation and validation
- *
  * CONFIGURATION:
  * - jwt.secret: Secret key for signing tokens (load from environment)
  * - jwt.expiration: Access token expiration in milliseconds (60 minutes)
@@ -61,8 +63,9 @@ public class JwtTokenProvider {
 
     private SecretKey secretKey;
 
-    // ==================== INITIALIZATION ====================
-    /**
+
+    
+    /** ==================== INITIALIZATION ====================
      * Post-construct method - runs after constructor
      * Converts secret string into cryptographic key
      * Called automatically by Spring
@@ -75,10 +78,10 @@ public class JwtTokenProvider {
         log.info("JWT Token Provider initialized");
     }
 
-    // ==================== TOKEN GENERATION ====================
-    /**
+
+    
+    /** ==================== TOKEN GENERATION ====================
      * Generate access token (short-lived, 60 minutes)
-     *
      * @param authentication Spring Security authentication object
      * @return JWT access token string
      */
@@ -102,7 +105,6 @@ public class JwtTokenProvider {
     /**
      * Generate access token from user ID
      * Used when issuing new token from refresh token
-     *
      * @param userId User UUID
      * @param username User username
      * @param roles User roles as comma-separated string
@@ -120,7 +122,6 @@ public class JwtTokenProvider {
     /**
      * Generate refresh token (long-lived, 7 days)
      * Used for getting new access tokens without re-login
-     *
      * @param userId User UUID
      * @param username User username
      * @return JWT refresh token string
@@ -136,7 +137,6 @@ public class JwtTokenProvider {
     /**
      * Core token building method
      * Creates JWT with specified claims and expiration
-     *
      * @param claims Custom claims to embed in token
      * @param subject Token subject (usually username)
      * @param expirationTime Token lifetime in milliseconds
@@ -155,11 +155,10 @@ public class JwtTokenProvider {
             .compact();                              // Serialize to string
     }
 
-    // ==================== TOKEN VALIDATION ====================
-    /**
+    // 
+    /** ==================== TOKEN VALIDATION ====================
      * Validate token signature and expiration
      * Should be called before using token claims
-     *
      * @param token JWT token string
      * @return true if token is valid, false otherwise
      */
@@ -188,7 +187,6 @@ public class JwtTokenProvider {
 
     /**
      * Check if token is expired without throwing exception
-     *
      * @param token JWT token string
      * @return true if token is expired
      */
@@ -203,11 +201,10 @@ public class JwtTokenProvider {
         }
     }
 
-    // ==================== CLAIM EXTRACTION ====================
-    /**
+    
+    /** ==================== CLAIM EXTRACTION ====================
      * Extract username from token
      * Token subject is typically the username
-     *
      * @param token JWT token string
      * @return Username extracted from token
      */
@@ -275,6 +272,6 @@ public class JwtTokenProvider {
     }
 }
 
-public class JwtTokenProvider {
+// public class JwtTokenProvider {
     
-}
+// }

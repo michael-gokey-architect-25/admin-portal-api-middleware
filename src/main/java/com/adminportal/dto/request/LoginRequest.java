@@ -1,4 +1,5 @@
 // admin-portal-api/src/main/java/com/adminportal/dto/request/LoginRequest.java
+
 // ============================================================================
 // PURPOSE: Request DTO for user login endpoint
 // - Receives email and password from client

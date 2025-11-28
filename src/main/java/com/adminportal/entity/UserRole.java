@@ -1,5 +1,7 @@
 
 //  admin-portal-api/src/main/java/com/adminportal/entity/UserRole.java
+
+
 // ============================================================================
 // PURPOSE: Enum for user roles (type-safe alternative to strings)
 // - Prevents invalid role values
@@ -23,6 +25,3 @@ public enum UserRole {
     USER        // Regular user with limited access
 }
 
-public class UserRole {
-    
-}

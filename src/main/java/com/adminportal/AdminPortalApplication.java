@@ -117,6 +117,3 @@ public class AdminPortalApplication {
     }
 }
 
-public class AdminPortalApplication {
-    
-}

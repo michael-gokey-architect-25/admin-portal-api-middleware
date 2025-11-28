@@ -1,4 +1,6 @@
 // admin-portal-api/src/main/java/com/adminportal/dto/response/LoginResponse.java
+
+
 // ============================================================================
 // PURPOSE: Response DTO for successful login
 // - Returns JWT tokens and user information

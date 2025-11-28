@@ -1,4 +1,5 @@
 // admin-portal-api/src/main/java/com/adminportal/entity/RefreshToken.java
+
 // ============================================================================
 // PURPOSE: JPA Entity for storing refresh tokens
 // - Enables long-lived user sessions without re-authentication
@@ -21,7 +22,6 @@ import java.util.UUID;
 
 /**
  * RefreshToken Entity - Manages JWT refresh tokens
- *
  * DATABASE TABLE: refresh_tokens
  * RELATIONSHIPS: Many-to-One with User
  * PURPOSE: Enable token refresh without user re-authentication
@@ -41,8 +41,8 @@ import java.util.UUID;
 @Builder
 public class RefreshToken {
 
-    // ==================== PRIMARY KEY ====================
-    /**
+  
+    /** ==================== PRIMARY KEY ====================
      * Unique identifier for refresh token record
      */
     @Id
@@ -50,8 +50,9 @@ public class RefreshToken {
     @Column(name = "id", columnDefinition = "uuid")
     private UUID id;
 
-    // ==================== FOREIGN KEY ====================
-    /**
+
+    
+    /** ==================== FOREIGN KEY ====================
      * Reference to User entity
      * ManyToOne: Multiple tokens can exist for one user
      * FetchType.LAZY: Load user only when accessed
@@ -64,8 +65,9 @@ public class RefreshToken {
     )
     private User user;
 
-    // ==================== TOKEN FIELD ====================
-    /**
+    
+
+    /** ==================== TOKEN FIELD ====================
      * Actual JWT refresh token string
      * UNIQUE: Only one active token per session
      * Typically 256 characters (base64 encoded)
@@ -73,8 +75,8 @@ public class RefreshToken {
     @Column(name = "token", nullable = false, unique = true, columnDefinition = "TEXT")
     private String token;
 
-    // ==================== EXPIRATION ====================
-    /**
+
+    /** ==================== EXPIRATION ====================
      * When this refresh token expires
      * Typically 7 days from creation
      * After expiration, user must login again
@@ -82,8 +84,9 @@ public class RefreshToken {
     @Column(name = "expires_at", nullable = false)
     private LocalDateTime expiresAt;
 
-    // ==================== AUDIT ====================
-    /**
+
+    
+    /**  ==================== AUDIT ====================
      * When token was created (issued)
      */
     @CreationTimestamp
@@ -98,8 +101,8 @@ public class RefreshToken {
     @Column(name = "revoked_at")
     private LocalDateTime revokedAt;
 
-    // ==================== HELPER METHODS ====================
-    /**
+
+    /** ==================== HELPER METHODS ====================
      * Check if token has expired
      * @return true if current time is after expiresAt
      */
@@ -127,6 +130,3 @@ public class RefreshToken {
 
 
 
-public class RefreshToken {
-    
-}

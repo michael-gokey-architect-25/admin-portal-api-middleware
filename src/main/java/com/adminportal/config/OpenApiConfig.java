@@ -1,4 +1,5 @@
 // admin-portal-api/src/main/java/com/adminportal/config/OpenApiConfig.java
+
 // ============================================================================
 // PURPOSE: Configuration for Swagger/OpenAPI documentation
 // - Customizes Swagger UI appearance

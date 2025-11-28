@@ -1,0 +1,26 @@
+# admin-portal-api/src/main/resources/application-local.yml
+
+# ============================================================================
+# PURPOSE: Local development configuration
+# - Override profile settings for local machine testing
+# - Use native PostgreSQL instance instead of Docker
+# Interesting that Angular is gettign away from envirnmentals
+# ============================================================================
+
+spring:
+  config:
+    activate:
+      on-profile: local
+  
+  jpa:
+    hibernate:
+      ddl-auto: update
+  
+  datasource:
+    url: jdbc:postgresql://localhost:5432/admin_portal_local
+    username: postgres
+    password: postgres
+
+server:
+  port: 3000
+

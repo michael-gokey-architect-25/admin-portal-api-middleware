@@ -1,5 +1,6 @@
 
 // admin-portal-api/src/main/java/com/adminportal/config/JwtConfigProperties.java
+
 // ============================================================================
 // PURPOSE: Configuration properties for JWT settings
 // - Binds application.yml jwt.* properties to Java class
@@ -21,7 +22,6 @@ import org.springframework.stereotype.Component;
 
 /**
  * JWT Configuration Properties
- *
  * Binds to application.yml:
  * jwt:
  *   secret: "..."

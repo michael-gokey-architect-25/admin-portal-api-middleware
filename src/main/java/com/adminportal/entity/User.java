@@ -1,4 +1,5 @@
 // admin-portal-api/src/main/java/com/adminportal/entity/User.java
+
 // ============================================================================
 // PURPOSE: JPA Entity representing a user in the system
 // - Maps to "users" table in database
@@ -31,7 +32,6 @@ import java.util.UUID;
 
 /**
  * User Entity - Represents application users
- *
  * DATABASE TABLE: users
  * RELATIONSHIPS: One-to-Many with RefreshToken
  * AUDIT: created_at, updated_at timestamps tracked automatically
@@ -54,8 +54,9 @@ import java.util.UUID;
 @Builder  // Lombok: generates builder pattern
 public class User {
 
-    // ==================== PRIMARY KEY ====================
-    /**
+
+    
+    /** ==================== PRIMARY KEY ====================
      * Unique identifier - UUID format
      * Generated automatically by database
      */
@@ -64,8 +65,9 @@ public class User {
     @Column(name = "id", columnDefinition = "uuid")
     private UUID id;
 
-    // ==================== AUTHENTICATION FIELDS ====================
-    /**
+
+    
+    /** ==================== AUTHENTICATION FIELDS ====================
      * User email address - UNIQUE, required for login
      * Used as secondary login identifier
      */
@@ -90,8 +92,8 @@ public class User {
     @Column(name = "password", nullable = false, length = 255)
     private String password;
 
-    // ==================== PROFILE FIELDS ====================
-    /**
+
+    /** ==================== PROFILE FIELDS ====================
      * User first name
      */
     @Column(name = "first_name", nullable = false, length = 50)
@@ -117,8 +119,8 @@ public class User {
     @Column(name = "department", length = 100)
     private String department;
 
-    // ==================== AUTHORIZATION FIELDS ====================
-    /**
+ 
+    /** ==================== AUTHORIZATION FIELDS ==================
      * User role - determines access level and permissions
      * ADMIN: Full system access, can manage all users
      * MANAGER: Can manage team members and view reports
@@ -162,8 +164,9 @@ public class User {
     @Column(name = "can_manage_settings", nullable = false)
     private Boolean canManageSettings = false;
 
-    // ==================== AUDIT FIELDS ====================
-    /**
+
+    
+    /** ==================== AUDIT FIELDS ====================
      * Timestamp when user account was created
      * Set automatically by Hibernate
      */
@@ -186,8 +189,8 @@ public class User {
     @Column(name = "last_login_date")
     private LocalDateTime lastLoginDate;
 
-    // ==================== HELPER METHODS ====================
-    /**
+
+    /** ==================== HELPER METHODS ====================
      * Get full display name (concatenated first and last name)
      * Usage: user.getFullName() -> "John Doe"
      */
@@ -210,6 +213,4 @@ public class User {
     }
 }
 
-public class User {
-    
-}
+
