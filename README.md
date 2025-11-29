@@ -11,10 +11,10 @@ And then at Cognizant Hartford, I spent hours "learning" / mastering the Spring 
 
 #### Next steps
 I know it looks like a lot of broken stuff. But it takes time to figure out each step
-- 4 Service Layer,  (DONE)
-- 5 Controller Layer, (DONE)
-- 6 Repository Layer, (this push commit)
-- 7 Exception Handling
+- 4 [**Service Layer**](https://github.com/michael-gokey-architect-25/admin-portal-api-middleware/wiki/Service-Layer-Architecture) (AuthService, UserService),  (DONE)
+- 5 [**Controller Layer**](https://github.com/michael-gokey-architect-25/admin-portal-api-middleware/wiki/Controller-Layer-Architecture), (DONE)
+- 6 [**Repository Layer**](https://github.com/michael-gokey-architect-25/admin-portal-api-middleware/wiki/Repository-Layer), (DONE)
+- 7 [Exception Handling](https://github.com/michael-gokey-architect-25/admin-portal-api-middleware/wiki/Exception-Handling)  (this push commit)
 - 8 Unit & Integration Tests
 - 9 Database Migration work
 
