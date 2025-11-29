@@ -1,6 +1,5 @@
 // admin-portal-api/src/main/java/com/adminportal/repository/RefreshTokenRepository.java
 
-
 // ============================================================================
 // PURPOSE: Spring Data JPA repository for RefreshToken entity
 // - Manage JWT refresh token records
@@ -33,7 +32,7 @@ import java.util.UUID;
 @Repository
 public interface RefreshTokenRepository extends JpaRepository<RefreshToken, UUID> {
 
-    // ==================== FINDING TOKENS ====================
+    // ============== FINDING TOKENS ================
     /**
      * Find refresh token by token string
      * Used during token refresh and logout
@@ -55,7 +54,7 @@ public interface RefreshTokenRepository extends JpaRepository<RefreshToken, UUID
 
 
 
-    // ==================== TOKEN LIFECYCLE ====================
+    // =============== TOKEN LIFECYCLE ==============
     /**
      * Find valid tokens for user (not expired, not revoked)
      * Used for active session management

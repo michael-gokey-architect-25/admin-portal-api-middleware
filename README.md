@@ -5,11 +5,15 @@ And then at Cognizant Hartford, I spent hours "learning" / mastering the Spring 
 
 *Remarkdly, I can do the same with .NET API work. Simular patterns, once you undertand the layers and the OpenAPI Swagger doc.*
 
+*See the Wiki for Notes:* 
+* [admin-portal-api-middleware/wiki](https://github.com/michael-gokey-architect-25/admin-portal-api-middleware/wiki)  UPDATED! 
+
+
 #### Next steps
 I know it looks like a lot of broken stuff. But it takes time to figure out each step
 - 4 Service Layer,  (DONE)
-- 5 Controller Layer, (this push commit)
-- 6 Repository Layer,
+- 5 Controller Layer, (DONE)
+- 6 Repository Layer, (this push commit)
 - 7 Exception Handling
 - 8 Unit & Integration Tests
 - 9 Database Migration work
@@ -24,9 +28,7 @@ This repo part is the Java Spring Boot API Middleware, built with **Spring Boot*
 
 There is a Data repo, data-portal, and a Multi-Cloud Highly Available Web Application design. 
 
-See the Wiki for Notes:
 
-https://github.com/michael-gokey-architect-25/admin-portal-api-middleware/wiki  UPDATED! 
 
 
 
@@ -394,13 +396,12 @@ services:
       - postgres
 ```
 
-### **Kubernetes (Production)**
-- Helm charts for deployment
-- StatefulSet for database
+
+#### **Kubernetes (Production)**
 - Deployment for API service
 - Service for load balancing
 - ConfigMap for environment variables
-- Secrets for sensitive data (JWT keys, DB credentials)
+- Secrets for sensitive data (JWT keys, DB credentials!) 
 
 ---
 
@@ -441,5 +442,5 @@ On push to main:
 | **Development Timeline** | 2-3 weeks |
 
 
-
+Lets find out how well I can cobble together a full-stack with a multitude of languages in mixed multi-cloud environment.
 

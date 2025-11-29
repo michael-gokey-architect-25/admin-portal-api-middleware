@@ -49,7 +49,7 @@ import java.util.UUID;
 @Repository
 public interface UserRepository extends JpaRepository<User, UUID> {
 
-    /** ==================== FINDING BY SINGLE FIELD ============
+    /** ========= FINDING BY SINGLE FIELD ============
      * Find user by email (case-sensitive)
      * Used for login, registration validation
      *
@@ -76,7 +76,7 @@ public interface UserRepository extends JpaRepository<User, UUID> {
 
 
      
-    /** ==================== PAGINATION & FILTERING ====================
+    /** ============= PAGINATION & FILTERING ================
      * Find all users of specific role (paginated)
      * Used for listing managers, admins, etc.
      *
@@ -120,7 +120,7 @@ public interface UserRepository extends JpaRepository<User, UUID> {
 
 
     
-    /** ==================== CUSTOM @QUERY METHODS ====================
+    /** ============== CUSTOM @QUERY METHODS ================
      * Search users by name, email, or username
      * Case-insensitive LIKE search
      *
