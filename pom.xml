@@ -177,11 +177,62 @@ PURPOSE: Maven Project Object Model configuration
       <scope>test</scope>
     </dependency>
 
+    <dependency>
+        <groupId>org.junit.jupiter</groupId>
+        <artifactId>junit-jupiter-api</artifactId>
+        <version>5.9.3</version>
+        <scope>test</scope>
+    </dependency>
+
+    <dependency>
+        <groupId>org.junit.jupiter</groupId>
+        <artifactId>junit-jupiter-engine</artifactId>
+        <version>5.9.3</version>
+        <scope>test</scope>
+    </dependency>
+
+    <!-- Mockito (for mocking) -->
+    <dependency>
+        <groupId>org.mockito</groupId>
+        <artifactId>mockito-core</artifactId>
+        <version>5.3.1</version>
+        <scope>test</scope>
+    </dependency>
+
+    <dependency>
+        <groupId>org.mockito</groupId>
+        <artifactId>mockito-junit-jupiter</artifactId>
+        <version>5.3.1</version>
+        <scope>test</scope>
+    </dependency>
+
+    <!-- Spring Boot Test (includes AssertJ, Hamcrest, etc.) -->
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-test</artifactId>
+        <version>3.1.5</version>
+        <scope>test</scope>
+        <exclusions>
+            <exclusion>
+                <groupId>org.junit.vintage</groupId>
+                <artifactId>junit-vintage-engine</artifactId>
+            </exclusion>
+        </exclusions>
+    </dependency>
+
     <!-- Spring Security test utilities -->
     <dependency>
       <groupId>org.springframework.security</groupId>
       <artifactId>spring-security-test</artifactId>
       <scope>test</scope>
+    </dependency>
+
+    <!-- H2 Database (for in-memory testing) -->
+    <dependency>
+        <groupId>com.h2database</groupId>
+        <artifactId>h2</artifactId>
+        <version>2.1.214</version>
+        <scope>test</scope>
     </dependency>
 
     <!-- Testcontainers - PostgreSQL in Docker for integration tests -->
@@ -204,7 +255,18 @@ PURPOSE: Maven Project Object Model configuration
       <scope>test</scope>
     </dependency>
 
+    <!-- JaCoCo for Code Coverage -->
+    <dependency>
+        <groupId>org.jacoco</groupId>
+        <artifactId>jacoco-maven-plugin</artifactId>
+        <version>0.8.10</version>
+        <scope>test</scope>
+    </dependency>
+
   </dependencies>
+
+
+
 
   <!-- ===================== BUILD PLUGINS ===================== -->
   <!-- Tools that compile, package, and manage the build process -->
@@ -223,6 +285,7 @@ PURPOSE: Maven Project Object Model configuration
           </excludes>
         </configuration>
       </plugin>
+
 
       <!-- Maven Compiler Plugin - configures Java compilation -->
       <plugin>
@@ -246,6 +309,42 @@ PURPOSE: Maven Project Object Model configuration
           </annotationProcessorPaths>
         </configuration>
       </plugin>
+
+      <!-- Maven Surefire Plugin (for running tests) -->
+      <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-surefire-plugin</artifactId>
+          <version>3.0.0</version>
+          <configuration>
+              <includes>
+                  <include>**/*Test.java</include>
+                  <include>**/*Tests.java</include>
+              </includes>
+          </configuration>
+      </plugin>
+
+      <!-- JaCoCo Plugin (for code coverage reports) -->
+      <plugin>
+          <groupId>org.jacoco</groupId>
+          <artifactId>jacoco-maven-plugin</artifactId>
+          <version>0.8.10</version>
+          <executions>
+              <execution>
+                  <goals>
+                      <goal>prepare-agent</goal>
+                  </goals>
+              </execution>
+              <execution>
+                  <id>report</id>
+                  <phase>test</phase>
+                  <goals>
+                      <goal>report</goal>
+                  </goals>
+              </execution>
+          </executions>
+      </plugin>
+
+
 
       <!-- Surefire Plugin - runs unit tests -->
       <plugin>

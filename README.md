@@ -14,9 +14,9 @@ I know it looks like a lot of broken stuff. But it takes time to figure out each
 - 4 [**Service Layer**](https://github.com/michael-gokey-architect-25/admin-portal-api-middleware/wiki/Service-Layer-Architecture) (AuthService, UserService),  (DONE)
 - 5 [**Controller Layer**](https://github.com/michael-gokey-architect-25/admin-portal-api-middleware/wiki/Controller-Layer-Architecture), (DONE)
 - 6 [**Repository Layer**](https://github.com/michael-gokey-architect-25/admin-portal-api-middleware/wiki/Repository-Layer), (DONE)
-- 7 [Exception Handling](https://github.com/michael-gokey-architect-25/admin-portal-api-middleware/wiki/Exception-Handling)  (this push commit)
-- 8 Unit & Integration Tests
-- 9 Database Migration work
+- 7 [Exception Handling](https://github.com/michael-gokey-architect-25/admin-portal-api-middleware/wiki/Exception-Handling), (DONE)
+- 8 Unit & Integration Tests (this push commit, still in progress),
+- 9 Database Migration work (not yet started)
 
 ==========================================
 
@@ -444,3 +444,28 @@ On push to main:
 
 Lets find out how well I can cobble together a full-stack with a multitude of languages in mixed multi-cloud environment.
 
+/*
+src/test/
+├── java/com/adminportal/
+│   ├── service/
+│   │   ├── AuthServiceTest.java
+│   │   ├── UserServiceTest.java
+│   │   └── HealthServiceTest.java
+│   ├── controller/
+│   │   ├── AuthControllerTest.java
+│   │   └── UserControllerTest.java
+│   ├── repository/
+│   │   ├── UserRepositoryTest.java
+│   │   └── RefreshTokenRepositoryTest.java
+│   ├── security/
+│   │   ├── JwtTokenProviderTest.java
+│   │   └── CustomUserDetailsServiceTest.java
+│   ├── integration/
+│   │   ├── AuthIntegrationTest.java
+│   │   └── UserIntegrationTest.java
+│   └── fixtures/
+│       └── TestDataBuilder.java (helper for creating test data)
+└── resources/
+    ├── application-test.yml
+    └── logback-test.xml
+*/
