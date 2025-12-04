@@ -701,18 +701,17 @@ class UserServiceTest {
 /* ========================================================
 // TEST EXECUTION TIPS:
 1. Run individual test:
-   mvn test -Dtest=UserServiceTest#testCreateUser_Success
+        mvn test -Dtest=UserServiceTest#testCreateUser_Success
 2. Run all UserService tests:
-   mvn test -Dtest=UserServiceTest
+        mvn test -Dtest=UserServiceTest
 3. Run specific test class pattern:
-   mvn test -Dtest=UserServiceTest#testCreate*
+        mvn test -Dtest=UserServiceTest#testCreate*
 4. Run with coverage reporting:
-   mvn test jacoco:report
+        mvn test jacoco:report
 5. View coverage report:
    open target/site/jacoco/index.html (on Mac)
    target/site/jacoco/index.html (on Linux/Windows)
 6. Expected output:
-   [INFO] Tests run: 20, Failures: 0, Errors: 0, Skipped: 0
-*/
+   [INFO] Tests run: 20, Failures: 0, Errors: 0, Skipped: 0 */
 
 
